@@ -1,0 +1,4 @@
+@import "tailwindcss";
+.clip-arrow {
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
