@@ -1,28 +1,19 @@
-import BusinessDevelopment from "./components/BusinessDevelopment";
-import BusinessGatewayTable from "./components/BusinessGatewayTable";
-import DRDOInitiatives from "./components/DRDOInitiatives";
-import DrdoOrgChart from "./components/DrdoOrgChart";
-import DrdoOrgSection from "./components/DrdoOrgSection";
-import SoftwareToolsTable from "./components/SoftwareToolsTable";
-import StrategicPositioning from "./components/StrategicPositioning";
-import ToolsPlatforms from "./components/ToolsPlatforms";
-import Footer from "./Pages/Footer";
-import Navbar from "./Pages/Navabr";
-// import DrdoTechVerticals from "./components/DrdoTechVerticals";
+import React from "react";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Expertise from "./components/Expertise";
+import Impact from "./components/Impact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-900 p-6">
-      <Navbar />
-      <DrdoOrgSection />
-      <DrdoOrgChart />
-      <DRDOInitiatives />
-      <BusinessGatewayTable />
-      <StrategicPositioning />
-      <BusinessDevelopment />
-      <ToolsPlatforms />
-
-      <SoftwareToolsTable />
+    <div className="font-sans text-gray-900">
+      <Header />
+      <Hero />
+      <About />
+      <Expertise />
+      <Impact />
       <Footer />
     </div>
   );
