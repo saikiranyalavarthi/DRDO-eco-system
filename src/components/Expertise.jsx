@@ -7,55 +7,55 @@ const verticals = [
     blurb:
       "Avionics integration, cockpit systems, and flight worthy electronics.",
     link: "/verticals/aviation",
-    img: "/images/aviation.jpg",
+    img: "/images/banner1.jpg",
   },
   {
     title: "Defence",
     blurb: "Ruggedized, mission ready solutions for harsh environments.",
     link: "/verticals/defence",
-    img: "/images/defence.jpg",
+    img: "/images/banner2.jpg",
   },
   {
     title: "Railways",
     blurb: "Control systems, signaling interfaces, and onboard electronics.",
     link: "/verticals/railways",
-    img: "/images/railways.jpg",
+    img: "/images/banner3.jpg",
   },
   {
     title: "Space",
     blurb: "Satellite subsystems, ground segment hardware, and test fixtures.",
     link: "/verticals/space",
-    img: "/images/space.jpg",
+    img: "/images/banner4.jpg",
   },
   {
     title: "Aviation & Defence Equipment",
     blurb: "Custom LRUs, enclosures, and test benches.",
     link: "/verticals/aviation-defence-equipments",
-    img: "/images/ade.jpg",
+    img: "/images/banner5.jpg",
   },
   {
     title: "Quality & Compliance",
     blurb: "Standards driven processes and rigorous QA.",
     link: "/verticals/quality-compliance",
-    img: "/images/quality.jpg",
+    img: "/images/banner6.jpg",
   },
   {
     title: "Spare Management",
     blurb: "Lifecycle planning, spares provisioning, obsolescence control.",
     link: "/verticals/spare-management",
-    img: "/images/spare.jpg",
+    img: "/images/banner7.jpg",
   },
   {
     title: "Consultancy",
     blurb: "Design reviews, certification support, reliability engineering.",
     link: "/verticals/consultancy",
-    img: "/images/consultancy.jpg",
+    img: "/images/banner8.jpg",
   },
   {
     title: "Electromechanical Projects",
     blurb: "Racks, cabinets, and field ready assemblies.",
     link: "/verticals/electromechanical-projects",
-    img: "/images/electromechanical.jpg",
+    img: "/images/banner9.jpg",
   },
 ];
 
@@ -78,9 +78,6 @@ export default function Expertise() {
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{v.title}</h3>
                 <p className="text-gray-700 mb-4">{v.blurb}</p>
-                <Link to={v.link} className="text-blue-600 hover:underline">
-                  Learn More
-                </Link>
               </div>
             </div>
           ))}
