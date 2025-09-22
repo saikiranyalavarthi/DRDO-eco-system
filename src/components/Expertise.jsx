@@ -61,28 +61,66 @@ const verticals = [
 
 export default function Expertise() {
   return (
-    <section id="expertise" className="py-16 bg-gray-50">
+    <section
+      id="expertise"
+      className="py-16 bg-gradient-to-b from-gray-50 to-gray-100"
+    >
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold mb-12">Our Expertise</h2>
+        {/* Title with Yellow Underline */}
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
+          Our Expertise
+        </h2>
+        <div className="w-24 h-1 bg-yellow-400 mx-auto mb-12 rounded-full"></div>
+
+        {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {verticals.map((v, index) => (
             <div
               key={index}
-              className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              className="group bg-white shadow-md rounded-xl overflow-hidden transform transition duration-500 hover:-translate-y-2 hover:shadow-2xl border border-transparent hover:border-yellow-400/70 animate-fadeInUp"
+              style={{
+                animationDelay: `${index * 0.1}s`,
+                animationFillMode: "backwards",
+              }}
             >
-              <img
-                src={v.img}
-                alt={v.title}
-                className="h-48 w-full object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{v.title}</h3>
-                <p className="text-gray-700 mb-4">{v.blurb}</p>
+              {/* Image with zoom hover */}
+              <div className="overflow-hidden">
+                <img
+                  src={v.img}
+                  alt={v.title}
+                  className="h-48 w-full object-cover transform group-hover:scale-105 transition duration-500"
+                />
+              </div>
+
+              {/* Text Content */}
+              <div className="p-6 text-left">
+                <h3 className="text-xl font-semibold mb-2 text-yellow-400 group-hover:text-yellow-500 transition">
+                  {v.title}
+                </h3>
+                <p className="text-gray-600 mb-4">{v.blurb}</p>
+
+                <Link
+                  to={v.link}
+                  className="inline-block text-sm font-medium text-yellow-600 group-hover:text-yellow-700 transition"
+                >
+                  Learn More →
+                </Link>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Animation Styles */}
+      <style>{`
+        @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeInUp {
+          animation: fadeInUp 0.6s ease forwards;
+        }
+      `}</style>
     </section>
   );
 }
