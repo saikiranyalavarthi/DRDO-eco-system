@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-12">
+    <footer className="bg-gradient-to-b from-[#0A1420] to-[#121E2A] text-gray-300 py-12">
       <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
         {/* BUSINESS SEGMENTS */}
         <div>
